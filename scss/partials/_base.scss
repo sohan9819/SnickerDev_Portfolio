@@ -1,0 +1,41 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-snap-type: x proximity;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  box-sizing: border-box;
+  background: $dark-gray;
+  scroll-snap-type: mandatory;
+  scroll-snap-points-y: repeat(100vh);
+  scroll-snap-type: y mandatory;
+}
+
+.blue {
+  color: #09d3ff;
+}
+
+.red {
+  color: #ef5350;
+}
+
+.orange {
+  color: #ff7e06;
+}
+
+.white {
+  color: white;
+}
+
+.voilet {
+  color: #cc53f6;
+}

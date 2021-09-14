@@ -1,0 +1,186 @@
+.home {
+  display: none;
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  flex-direction: column;
+  color: $light-gray;
+
+  .myself {
+    height: 10%;
+    width: 80%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    position: relative;
+    margin-top: 10vh;
+
+    .iline {
+      min-width: max-content;
+      display: flex;
+      align-items: center;
+      justify-content: flex-end;
+      height: 80%;
+      width: 40%;
+      color: $light-gray;
+      font-family: $ff-sec;
+      font-size: 2rem;
+      letter-spacing: 2px;
+      padding: 0px 10px 0px;
+    }
+
+    .qualities {
+      height: 80%;
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      position: relative;
+      // background-color: $gray;
+      overflow: hidden;
+
+      .designer {
+        // display: none;
+        position: absolute;
+        font-size: 2.4rem;
+        letter-spacing: 2px;
+        color: $accent;
+        left: 0px;
+        transform: translateX(-100%);
+        animation: Designerreveal 8s ease-in-out infinite;
+        animation-delay: 0s;
+      }
+
+      .developer {
+        // display: none;
+        position: absolute;
+        font-size: 2.4rem;
+        letter-spacing: 2px;
+        color: $accent;
+        left: 0px;
+        transform: translateX(-100%);
+        animation: Developerreveal 8s ease-in-out infinite;
+        animation-delay: 0s;
+      }
+
+      .coder {
+        // display: none;
+        position: absolute;
+        font-size: 2.4rem;
+        letter-spacing: 2px;
+        color: $accent;
+        left: 0px;
+        opacity: 0;
+        transform: translateX(-100%);
+        animation: Coderreveal 8s ease-in-out infinite;
+        animation-delay: 0s;
+      }
+
+      @keyframes Designerreveal {
+        from {
+          transform: translateX(-100%);
+          opacity: 0;
+        }
+
+        5% {
+          transform: translateX(0%);
+          opacity: 1;
+        }
+
+        30% {
+          transform: translateX(0%);
+          opacity: 1;
+        }
+        33% {
+          transform: translateX(-100%);
+          opacity: 1;
+        }
+
+        to {
+          transform: translateX(-100%);
+          opacity: 0;
+        }
+      }
+
+      @keyframes Developerreveal {
+        from {
+          transform: translateX(-100%);
+          opacity: 0;
+        }
+
+        33% {
+          transform: translateX(-100%);
+          opacity: 0;
+        }
+
+        38% {
+          transform: translateX(0%);
+          opacity: 1;
+        }
+
+        63% {
+          transform: translateX(0%);
+          opacity: 1;
+        }
+
+        66% {
+          transform: translateX(-100%);
+          opacity: 0;
+        }
+
+        to {
+          transform: translateX(-100%);
+          opacity: 0;
+        }
+      }
+
+      @keyframes Coderreveal {
+        from {
+          transform: translateX(-100%);
+          opacity: 0;
+        }
+
+        66% {
+          transform: translateX(-100%);
+          opacity: 0;
+        }
+
+        69% {
+          transform: translateX(0%);
+          opacity: 1;
+        }
+
+        97% {
+          transform: translateX(0%);
+          opacity: 1;
+        }
+
+        to {
+          transform: translateX(-100%);
+          opacity: 0;
+        }
+      }
+    }
+  }
+
+  .code-myself {
+    height: 60%;
+    width: 80%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    align-self: center;
+
+    .myCode {
+      p {
+        font-weight: 500;
+        font-family: $ff-sec;
+        font-size: 1.2rem;
+        letter-spacing: 0.3px;
+      }
+    }
+  }
+}
