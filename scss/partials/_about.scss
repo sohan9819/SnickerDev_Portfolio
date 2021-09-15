@@ -8,17 +8,44 @@
   gap: 2.4em;
 
   .sectionName {
+    width: 50%;
+    min-width: max-content;
     font-size: 2.2em;
     font-family: $ff-prim;
     color: $light-gray;
+    text-align: left;
   }
-  .aboutCode {
-    height: auto;
-    max-width: 80%;
-    color: $light-gray;
-    font-family: $ff-sec;
-    font-size: 1.2rem;
-    letter-spacing: 0.3px;
-    font-weight: 500;
+  .Imgcodebox {
+    width: 100vw;
+    max-width: 780px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+
+    .aboutCode {
+      height: auto;
+      max-width: 80%;
+      width: max-content;
+      color: $light-gray;
+      font-family: $ff-sec;
+      font-size: 1.2rem;
+      letter-spacing: 0.3px;
+      font-weight: 500;
+    }
+
+    .imgBox {
+      width: max-content;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      img {
+        height: auto;
+        width: 80%;
+        max-width: 30em;
+        margin: auto;
+      }
+    }
   }
 }

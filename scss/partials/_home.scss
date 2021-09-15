@@ -3,7 +3,7 @@
   height: 100vh;
   width: 100%;
   display: flex;
-  justify-content: center;
+  justify-content: start;
   align-items: flex-start;
   flex-direction: column;
   color: $light-gray;
@@ -171,7 +171,8 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    flex-direction: column;
+    // flex-direction: column;
+    flex-wrap: wrap;
     align-self: center;
 
     .myCode {
@@ -180,6 +181,20 @@
         font-family: $ff-sec;
         font-size: 1.2rem;
         letter-spacing: 0.3px;
+      }
+    }
+
+    .devimgBox {
+      width: max-content;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      img {
+        height: auto;
+        width: 80%;
+        max-width: 30em;
+        margin: auto;
       }
     }
   }

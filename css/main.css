@@ -245,7 +245,7 @@ body {
   height: 100vh;
   width: 100%;
   display: flex;
-  justify-content: center;
+  justify-content: start;
   align-items: flex-start;
   flex-direction: column;
   color: #e8e9eb;
@@ -398,7 +398,7 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  flex-direction: column;
+  flex-wrap: wrap;
   align-self: center;
 }
 
@@ -407,6 +407,20 @@ body {
   font-family: "Source Sans Pro", sans-serif;
   font-size: 1.2rem;
   letter-spacing: 0.3px;
+}
+
+.home .code-myself .devimgBox {
+  width: max-content;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.home .code-myself .devimgBox img {
+  height: auto;
+  width: 80%;
+  max-width: 30em;
+  margin: auto;
 }
 
 .nav nav {
@@ -536,18 +550,247 @@ body {
 }
 
 .About .sectionName {
+  width: 50%;
+  min-width: max-content;
   font-size: 2.2em;
   font-family: "Source Code Pro", monospace;
   color: #e8e9eb;
+  text-align: left;
 }
 
-.About .aboutCode {
+.About .Imgcodebox {
+  width: 100vw;
+  max-width: 780px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.About .Imgcodebox .aboutCode {
   height: auto;
   max-width: 80%;
+  width: max-content;
   color: #e8e9eb;
   font-family: "Source Sans Pro", sans-serif;
   font-size: 1.2rem;
   letter-spacing: 0.3px;
   font-weight: 500;
+}
+
+.About .Imgcodebox .imgBox {
+  width: max-content;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.About .Imgcodebox .imgBox img {
+  height: auto;
+  width: 80%;
+  max-width: 30em;
+  margin: auto;
+}
+
+#skills {
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 1em;
+}
+
+#skills h1 {
+  font-family: "Source Code Pro", monospace;
+  color: #e8e9eb;
+  text-align: left;
+  font-size: 2.1em;
+}
+
+#skills p {
+  font-weight: 500;
+  font-family: "Source Sans Pro", sans-serif;
+  font-size: 1.2rem;
+  letter-spacing: 0.3px;
+  color: #e8e9eb;
+}
+
+#skills .skillHeading {
+  width: 50%;
+  max-width: 60em;
+  min-width: max-content;
+  padding-top: 3em;
+}
+
+#skills .skillInfo {
+  width: 100%;
+  max-width: 85em;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  flex-wrap: wrap;
+  padding: 0.5em;
+  gap: 2em;
+}
+
+#skills .skillInfo .skillCode {
+  width: 100%;
+  max-width: 35em;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1em;
+}
+
+#skills .skillInfo .skillCode .languages {
+  width: 50%;
+  max-width: 30em;
+}
+
+#skills .skillInfo .skillCode .info2 {
+  width: 50%;
+  max-width: 60em;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1em;
+  flex-direction: column;
+}
+
+#skills .skillInfo .skillCode .info2 .framework {
+  width: 100%;
+}
+
+#skills .skillInfo .skillCode .info2 .others {
+  width: 100%;
+}
+
+#skills .skillInfo .imageBox {
+  width: max-content;
+  max-width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0;
+}
+
+#skills .skillInfo .imageBox img {
+  height: auto;
+  width: 100%;
+  min-width: 15em;
+  max-width: 40em;
+  margin: 0;
+}
+
+#projects {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  flex-direction: column;
+  padding-bottom: 4em;
+}
+
+#projects .projHeading {
+  width: 50%;
+  min-width: 20em;
+  justify-content: flex-start;
+  align-items: center;
+  padding: 1em;
+  padding-bottom: 2em;
+}
+
+#projects .projHeading h1 {
+  font-family: "Source Code Pro", monospace;
+  color: #e8e9eb;
+  text-align: left;
+  font-size: 2.1em;
+}
+
+#projects .projBox {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 2em;
+  padding: 1em;
+}
+
+#projects .projBox .proj {
+  width: 25em;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  gap: 0.5em;
+  padding: 1em;
+  border-radius: 1em;
+  position: relative;
+}
+
+#projects .projBox .proj:hover, #projects .projBox .proj:focus {
+  background-color: #202020;
+}
+
+#projects .projBox .proj:hover::before, #projects .projBox .proj:focus::before {
+  content: "";
+  width: 4px;
+  height: 80%;
+  position: absolute;
+  left: 0;
+}
+
+#projects .projBox .proj .projImage {
+  width: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+#projects .projBox .proj .projImage img {
+  width: 100%;
+  height: auto;
+  border-radius: 1em;
+}
+
+#projects .projBox .proj .projName {
+  width: 50%;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  flex-direction: column;
+  gap: 1em;
+}
+
+#projects .projBox .proj .projName h2 {
+  text-align: center;
+  color: #e8e9eb;
+  font-family: "Source Sans Pro", sans-serif;
+}
+
+#projects .projBox .proj .projName .projLinks {
+  width: 100%;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  font-size: 140%;
+}
+
+#projects .projBox .proj .projName .projLinks a {
+  color: #e8e9eb;
+}
+
+#trail {
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 /*# sourceMappingURL=main.css.map */
