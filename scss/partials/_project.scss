@@ -43,18 +43,24 @@
       padding: 1em;
       border-radius: 1em;
       position: relative;
+      transition: all 0.5s ease;
+
+      &::before {
+        content: "";
+        width: 0;
+        height: 4px;
+        position: absolute;
+        background-color: $accent;
+        bottom: 0;
+        transition: all 0.5s ease;
+      }
 
       &:hover,
       &:focus {
-        &::before {
-          content: "";
-          width: 4px;
-          height: 80%;
-          position: absolute;
-          // background-color: rgb(0, 0, 0);
-          left: 0;
-        }
         background-color: rgb(32, 32, 32);
+        &::before {
+          width: 90%;
+        }
       }
 
       .projImage {

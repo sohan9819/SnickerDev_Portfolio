@@ -539,7 +539,7 @@ body {
   }
 }
 
-.About {
+#about {
   height: 100vh;
   width: 100%;
   display: flex;
@@ -549,7 +549,7 @@ body {
   gap: 2.4em;
 }
 
-.About .sectionName {
+#about .sectionName {
   width: 50%;
   min-width: max-content;
   font-size: 2.2em;
@@ -558,7 +558,7 @@ body {
   text-align: left;
 }
 
-.About .Imgcodebox {
+#about .Imgcodebox {
   width: 100vw;
   max-width: 780px;
   display: flex;
@@ -567,7 +567,7 @@ body {
   flex-wrap: wrap;
 }
 
-.About .Imgcodebox .aboutCode {
+#about .Imgcodebox .aboutCode {
   height: auto;
   max-width: 80%;
   width: max-content;
@@ -578,14 +578,14 @@ body {
   font-weight: 500;
 }
 
-.About .Imgcodebox .imgBox {
+#about .Imgcodebox .imgBox {
   width: max-content;
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
-.About .Imgcodebox .imgBox img {
+#about .Imgcodebox .imgBox img {
   height: auto;
   width: 80%;
   max-width: 30em;
@@ -731,6 +731,17 @@ body {
   padding: 1em;
   border-radius: 1em;
   position: relative;
+  transition: all 0.5s ease;
+}
+
+#projects .projBox .proj::before {
+  content: "";
+  width: 0;
+  height: 4px;
+  position: absolute;
+  background-color: #03afc2;
+  bottom: 0;
+  transition: all 0.5s ease;
 }
 
 #projects .projBox .proj:hover, #projects .projBox .proj:focus {
@@ -738,11 +749,7 @@ body {
 }
 
 #projects .projBox .proj:hover::before, #projects .projBox .proj:focus::before {
-  content: "";
-  width: 4px;
-  height: 80%;
-  position: absolute;
-  left: 0;
+  width: 90%;
 }
 
 #projects .projBox .proj .projImage {
@@ -786,11 +793,73 @@ body {
   color: #e8e9eb;
 }
 
-#trail {
+#contact {
   height: 100vh;
   width: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+#contact .contactBox {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 2em;
+  position: relative;
+}
+
+#contact .contactBox .contactTitle {
+  width: 50%;
+  max-width: 60em;
+  min-width: 300px;
+  padding-top: 3em;
+}
+
+#contact .contactBox .contactTitle h2 {
+  font-family: "Source Code Pro", monospace;
+  color: #e8e9eb;
+  text-align: left;
+  font-size: 2.1em;
+}
+
+#contact .contactBox .contactElements {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+#contact .contactBox .contactElements .contactIcons {
+  max-width: 30em;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+#contact .contactBox .contactElements .contactIcons a {
+  text-decoration: none;
+  color: #e8e9eb;
+  font-size: 2.5rem;
+  transition: all 0.2s ease-in-out;
+}
+
+#contact .contactBox .contactElements .contactIcons a:hover, #contact .contactBox .contactElements .contactIcons a:focus {
+  color: #03afc2;
+  font-size: 2.8rem;
+}
+
+#contact .contactBox .contactElements .contactImage {
+  width: 100%;
+  max-width: 40em;
+}
+
+#contact .contactBox .contactElements .contactImage img {
+  width: 100%;
 }
 /*# sourceMappingURL=main.css.map */
