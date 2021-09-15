@@ -240,7 +240,7 @@ body {
   }
 }
 
-.home {
+#home {
   display: none;
   height: 100vh;
   width: 100%;
@@ -251,7 +251,7 @@ body {
   color: #e8e9eb;
 }
 
-.home .myself {
+#home .myself {
   height: 10%;
   width: 80%;
   display: flex;
@@ -261,7 +261,7 @@ body {
   margin-top: 10vh;
 }
 
-.home .myself .iline {
+#home .myself .iline {
   min-width: max-content;
   display: flex;
   align-items: center;
@@ -275,7 +275,7 @@ body {
   padding: 0px 10px 0px;
 }
 
-.home .myself .qualities {
+#home .myself .qualities {
   height: 80%;
   width: 100%;
   display: flex;
@@ -285,7 +285,7 @@ body {
   overflow: hidden;
 }
 
-.home .myself .qualities .designer {
+#home .myself .qualities .designer {
   position: absolute;
   font-size: 2.4rem;
   letter-spacing: 2px;
@@ -296,7 +296,7 @@ body {
   animation-delay: 0s;
 }
 
-.home .myself .qualities .developer {
+#home .myself .qualities .developer {
   position: absolute;
   font-size: 2.4rem;
   letter-spacing: 2px;
@@ -307,7 +307,7 @@ body {
   animation-delay: 0s;
 }
 
-.home .myself .qualities .coder {
+#home .myself .qualities .coder {
   position: absolute;
   font-size: 2.4rem;
   letter-spacing: 2px;
@@ -392,7 +392,7 @@ body {
   }
 }
 
-.home .code-myself {
+#home .code-myself {
   height: 60%;
   width: 80%;
   display: flex;
@@ -402,21 +402,21 @@ body {
   align-self: center;
 }
 
-.home .code-myself .myCode p {
+#home .code-myself .myCode p {
   font-weight: 500;
   font-family: "Source Sans Pro", sans-serif;
   font-size: 1.2rem;
   letter-spacing: 0.3px;
 }
 
-.home .code-myself .devimgBox {
+#home .code-myself .devimgBox {
   width: max-content;
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
-.home .code-myself .devimgBox img {
+#home .code-myself .devimgBox img {
   height: auto;
   width: 80%;
   max-width: 30em;
@@ -836,6 +836,7 @@ body {
 }
 
 #contact .contactBox .contactElements .contactIcons {
+  width: 100%;
   max-width: 30em;
   display: flex;
   justify-content: space-evenly;
