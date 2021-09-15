@@ -1,0 +1,69 @@
+#end {
+  height: 80vh;
+  width: 100%;
+  padding-top: 2em;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 0;
+
+  .endMessage {
+    width: 100%;
+    height: 40%;
+    max-width: 20em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    h3 {
+      text-align: center;
+      position: relative;
+
+      a {
+        text-decoration: none;
+        color: $light-gray;
+        font-family: $ff-prim;
+        transition: all 0.5s ease;
+      }
+
+      &::before {
+        content: "";
+        position: absolute;
+        width: 0%;
+        height: 2px;
+        background-color: $accent;
+        // left: 0;
+        // right: 0;
+        // bottom: 0;
+        top: 130%;
+        left: 50%;
+        transition: all 0.3s ease-in-out;
+      }
+
+      &:hover,
+      &:focus {
+        a {
+          color: $accent;
+        }
+
+        &::before {
+          width: 100%;
+          left: 0;
+        }
+      }
+    }
+  }
+
+  .endImage {
+    width: 100%;
+    max-width: 20em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    img {
+      width: 100%;
+    }
+  }
+}
