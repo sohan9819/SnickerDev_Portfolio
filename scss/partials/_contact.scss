@@ -55,18 +55,82 @@
         display: flex;
         justify-content: space-evenly;
         align-items: center;
-        // gap: 1em;
+        flex-direction: column;
+        gap: 2em;
 
-        a {
-          text-decoration: none;
-          color: $light-gray;
-          font-size: 2.5rem;
-          transition: all 0.2s ease-in-out;
+        .iconsMain {
+          width: 100%;
+          max-width: 30em;
+          display: flex;
+          justify-content: space-evenly;
+          align-items: center;
+          // gap: 1em;
 
-          &:hover,
-          &:focus {
-            color: $accent;
-            font-size: 2.8rem;
+          a {
+            text-decoration: none;
+            color: $light-gray;
+            font-size: 2.5rem;
+            transition: all 0.2s ease-in-out;
+
+            &:hover,
+            &:focus {
+              color: $accent;
+              font-size: 2.8rem;
+            }
+          }
+
+          // a {
+          //   text-decoration: none;
+          //   color: $light-gray;
+          //   font-size: 2.5rem;
+          //   transition: all 0.2s ease-in-out;
+
+          //   &:hover,
+          //   &:focus {
+          //     color: $accent;
+          //     font-size: 2.8rem;
+          //   }
+        }
+
+        .iconMail {
+          width: 100%;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          flex-wrap: wrap;
+          padding: 1em;
+          gap: 0.5em;
+
+          h3 {
+            font-size: 1.2em;
+            text-align: center;
+            color: $light-gray;
+            font-family: $ff-prim;
+            position: relative;
+            transition: all 0.2s ease-in-out;
+
+            &::before {
+              content: "";
+              width: 0%;
+              height: 2px;
+              background-color: $accent;
+              position: absolute;
+              top: 120%;
+              bottom: 0;
+              left: 50%;
+              right: 0;
+              transition: all 0.5s ease-in-out;
+            }
+
+            &:hover,
+            &:focus {
+              color: $accent;
+
+              &::before {
+                width: 100%;
+                left: 0;
+              }
+            }
           }
         }
       }

@@ -845,18 +845,69 @@ body {
   display: flex;
   justify-content: space-evenly;
   align-items: center;
+  flex-direction: column;
+  gap: 2em;
 }
 
-#contact .contactBox .contactElements .contactIcons a {
+#contact .contactBox .contactElements .contactIcons .iconsMain {
+  width: 100%;
+  max-width: 30em;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+#contact .contactBox .contactElements .contactIcons .iconsMain a {
   text-decoration: none;
   color: #e8e9eb;
   font-size: 2.5rem;
   transition: all 0.2s ease-in-out;
 }
 
-#contact .contactBox .contactElements .contactIcons a:hover, #contact .contactBox .contactElements .contactIcons a:focus {
+#contact .contactBox .contactElements .contactIcons .iconsMain a:hover, #contact .contactBox .contactElements .contactIcons .iconsMain a:focus {
   color: #03afc2;
   font-size: 2.8rem;
+}
+
+#contact .contactBox .contactElements .contactIcons .iconMail {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  padding: 1em;
+  gap: 0.5em;
+}
+
+#contact .contactBox .contactElements .contactIcons .iconMail h3 {
+  font-size: 1.2em;
+  text-align: center;
+  color: #e8e9eb;
+  font-family: "Source Code Pro", monospace;
+  position: relative;
+  transition: all 0.2s ease-in-out;
+}
+
+#contact .contactBox .contactElements .contactIcons .iconMail h3::before {
+  content: "";
+  width: 0%;
+  height: 2px;
+  background-color: #03afc2;
+  position: absolute;
+  top: 120%;
+  bottom: 0;
+  left: 50%;
+  right: 0;
+  transition: all 0.5s ease-in-out;
+}
+
+#contact .contactBox .contactElements .contactIcons .iconMail h3:hover, #contact .contactBox .contactElements .contactIcons .iconMail h3:focus {
+  color: #03afc2;
+}
+
+#contact .contactBox .contactElements .contactIcons .iconMail h3:hover::before, #contact .contactBox .contactElements .contactIcons .iconMail h3:focus::before {
+  width: 100%;
+  left: 0;
 }
 
 #contact .contactBox .contactElements .contactImage {
