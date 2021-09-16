@@ -32,6 +32,7 @@
     flex-wrap: wrap;
     gap: 2em;
     padding: 1em;
+    scroll-snap-align: center;
 
     .proj {
       width: 25em;
