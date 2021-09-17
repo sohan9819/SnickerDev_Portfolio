@@ -953,7 +953,7 @@ body {
   width: 100%;
   max-width: 40em;
   display: flex;
-  justify-content: center;
+  justify-content: space-evenly;
   align-items: center;
   flex-direction: column;
   gap: 1em;
