@@ -1,0 +1,129 @@
+#blog {
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  flex-direction: column;
+  gap: 0.6em;
+
+  .blogHead {
+    width: 50%;
+    max-width: 60em;
+    min-width: max-content;
+
+    h2 {
+      font-family: $ff-sec;
+      font-size: 2em;
+      color: $light-gray;
+    }
+  }
+
+  .blogMain {
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-wrap: wrap;
+
+    .blogsBox {
+      width: 100%;
+      max-width: 40em;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      gap: 2em;
+      padding: 0em 1em;
+
+      .blogInfo {
+        width: 100%;
+        max-width: 30em;
+        // display: flex;
+        // justify-content: center;
+        // align-items: center;
+        // background-color: rgb(226, 224, 130);
+        // flex-direction: row;
+        display: grid;
+        grid-template-columns: 40% 60%;
+        justify-items: center;
+        align-content: center;
+        border-radius: 0.6em;
+        padding: 6px 10px;
+
+        &:hover,
+        &:focus {
+          background-color: rgb(32, 32, 32);
+        }
+
+        .blogImg {
+          width: 100%;
+          max-width: 10em;
+          height: 100%;
+          display: flex;
+          justify-content: flex-end;
+          align-items: flex-end;
+
+          img {
+            width: 100%;
+            margin: auto;
+          }
+        }
+
+        .blogContent {
+          width: 100%;
+          max-width: 20em;
+          height: 100%;
+          display: flex;
+          justify-content: space-evenly;
+          align-items: center;
+          flex-direction: column;
+          flex-wrap: nowrap;
+          text-align: center;
+          font-family: $ff-sec;
+          gap: 0.4em;
+
+          h3 {
+            color: $light-gray;
+            font-family: $ff-sec;
+            font-size: 1.4em;
+          }
+
+          p {
+            color: $light-gray;
+            opacity: 0.6;
+          }
+
+          .blogLink {
+            opacity: 1;
+            a {
+              text-decoration: none;
+              color: $light-gray;
+
+              i {
+                padding: 0em 0.6em;
+              }
+            }
+          }
+        }
+      }
+    }
+
+    .blogImgBox {
+      width: 100%;
+      max-width: 30em;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 0;
+
+      img {
+        height: auto;
+        width: 100%;
+        min-width: 15em;
+        max-width: 40em;
+        margin: 0;
+      }
+    }
+  }
+}
