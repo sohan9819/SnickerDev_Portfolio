@@ -53,6 +53,7 @@
         position: absolute;
         background-color: $accent;
         bottom: 0;
+        border-radius: 1em;
         transition: all 0.5s ease;
       }
 
@@ -91,6 +92,11 @@
           color: $light-gray;
           font-family: $ff-sec;
           font-size: 1.2em;
+        }
+
+        p {
+          color: $light-gray;
+          opacity: 0.6;
         }
 
         .projLinks {
