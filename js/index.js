@@ -34,7 +34,7 @@ window.addEventListener('load', () => {
   setTimeout(() => {
     loader.style.display = 'none';
     sections.forEach((section) => {
-      section.style.display = 'block';
+      section.style.display = '';
     });
   }, 3000);
 });
