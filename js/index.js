@@ -22,3 +22,19 @@
 // };
 
 // navSlide();
+
+const loader = document.querySelector('#preloader');
+const sections = document.querySelectorAll('section');
+// console.log(loader);
+
+sections.forEach((section) => {
+  section.style.display = 'none';
+});
+window.addEventListener('load', () => {
+  setTimeout(() => {
+    loader.style.display = 'none';
+    sections.forEach((section) => {
+      section.style.display = 'block';
+    });
+  }, 3000);
+});
