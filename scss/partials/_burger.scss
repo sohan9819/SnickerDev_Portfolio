@@ -1,0 +1,53 @@
+.burger {
+  display: none;
+
+  div {
+    background-color: $light-gray;
+    height: 3px;
+    margin: 5px;
+    border-radius: 20%;
+    transition: all 0.3s ease;
+  }
+
+  .line1 {
+    width: 15px;
+  }
+  .line2 {
+    width: 25px;
+  }
+  .line3 {
+    width: 15px;
+    margin-left: auto;
+  }
+}
+
+@media (max-width: 800px) {
+  .burger {
+    width: max-content;
+    height: max-content;
+    cursor: pointer;
+    display: block;
+    position: absolute;
+    top: 2%;
+    right: 4%;
+    z-index: 10000;
+    position: fixed;
+  }
+
+  .active {
+    .line1 {
+      width: 25px;
+      transform: rotate(40deg);
+      transform-origin: left;
+    }
+    .line2 {
+      transform: translateX(0.2em);
+      opacity: 0;
+    }
+    .line3 {
+      width: 25px;
+      transform: rotate(-40deg);
+      transform-origin: left;
+    }
+  }
+}

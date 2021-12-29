@@ -40,14 +40,13 @@
       justify-content: space-evenly;
       align-items: center;
       gap: 0.5em;
-      //   background-color: #c36739;
       padding: 1em;
       border-radius: 1em;
       position: relative;
       transition: all 0.5s ease;
 
       &::before {
-        content: "";
+        content: '';
         width: 0;
         height: 4px;
         position: absolute;

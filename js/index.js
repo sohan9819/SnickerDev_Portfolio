@@ -1,27 +1,22 @@
-// const navSlide = () => {
-//   const burger = document.querySelector(".burger");
-//   const nav = document.querySelector(".nav-links");
-//   const navLinks = document.querySelectorAll(".nav-links li");
+const navbar_burger = document.querySelector('.burger');
+const navbar = document.querySelector('.nav');
+const navLinks = document.querySelectorAll('.nav-links > li');
 
-//   burger.addEventListener("click", () => {
-//     //Toggle Lav
-//     nav.classList.toggle("nav-active");
-//     //Animate Links
-//     navLinks.forEach((link, index) => {
-//       if (link.style.animation) {
-//         link.style.animation = "";
-//       } else {
-//         link.style.animation = `navLinkFade 0.5s ease forwards ${
-//           index / 7 + 0.3
-//         }s`;
-//       }
-//     });
-//     //Burger Animation
-//     burger.classList.toggle("toggle");
-//   });
-// };
+console.log(navLinks);
 
-// navSlide();
+const toggleActive = (e) => {
+  navbar.classList.toggle('active');
+  navbar_burger.classList.toggle('active');
+};
+navLinks.forEach((links) => {
+  links.addEventListener('click', toggleActive);
+});
+
+// console.log(navbar, navbar_burger);
+
+navbar_burger.addEventListener('click', toggleActive);
+
+// ######################################
 
 const loader = document.querySelector('#preloader');
 const sections = document.querySelectorAll('section');
@@ -30,11 +25,15 @@ const sections = document.querySelectorAll('section');
 sections.forEach((section) => {
   section.style.display = 'none';
 });
+
+navbar_burger.style.display = 'none';
+
 window.addEventListener('load', () => {
   setTimeout(() => {
     loader.style.display = 'none';
     sections.forEach((section) => {
       section.style.display = '';
+      navbar_burger.style.display = '';
     });
-  }, 3000);
+  }, 2000);
 });
