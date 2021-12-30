@@ -11,8 +11,9 @@
     color: $light-gray;
 
     .nav-links {
-      width: 60%;
+      width: 85%;
       height: 100%;
+      max-width: 900px;
       display: flex;
       justify-content: space-around;
       align-items: center;
@@ -29,8 +30,7 @@
           position: relative;
           padding: 16px 0px 16px;
 
-          &:hover,
-          &:focus {
+          &:hover {
             color: $accent;
           }
 
@@ -47,11 +47,21 @@
             transition: all 0.25s ease-in-out;
           }
 
-          &:hover::before,
-          &:focus::before {
+          &:hover::before {
             visibility: visible;
             transform: scaleX(1);
             background: $accent;
+          }
+        }
+      }
+
+      #snickLogo {
+        a {
+          font-family: $ff-special;
+          font-size: 1.4em;
+
+          &::before {
+            bottom: 5px;
           }
         }
       }
@@ -66,7 +76,6 @@
     position: fixed;
     overflow: hidden;
     scroll-snap-align: none;
-    transition: all 0.2s ease;
 
     nav {
       width: 100%;
@@ -89,7 +98,7 @@
         z-index: 1;
         height: 100%;
         width: 100%;
-        max-height: 30em;
+        max-height: 40em;
         display: flex;
         justify-content: center;
         align-items: center;
