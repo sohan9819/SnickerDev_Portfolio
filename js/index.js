@@ -3,10 +3,8 @@ const navbar = document.querySelector('.nav');
 const navLinks = document.querySelectorAll('.nav-links > li');
 
 const toggleActive = (e) => {
-  if (window.screen.width <= 800) {
-    navbar.classList.toggle('active');
-    navbar_burger.classList.toggle('active');
-  }
+  navbar.classList.toggle('active');
+  navbar_burger.classList.toggle('active');
 };
 navLinks.forEach((links) => {
   links.addEventListener('click', toggleActive);
