@@ -37,3 +37,43 @@ window.addEventListener('load', () => {
     });
   }, 2000);
 });
+
+// #######################################
+
+// const links = document.querySelectorAll('a');
+// console.log(links);
+// links.forEach((link) => {
+//   link.addEventListener('click', removeHash);
+// });
+// // console.log(window.location.origin);
+// // console.log(window.location.pathname);
+// // console.log(window.location.search);
+
+// console.log(location.href);
+// function removeHash(e) {
+//   // console.log('hello world');
+//   // history.replaceState(
+//   //   '',
+//   //   document.title,
+//   //   window.location.origin + window.location.pathname
+//   // );
+//   location.href = location.href.replace(location.hash, '');
+//   e.preventDefault();
+// }
+
+document.querySelectorAll('a').forEach(function (current) {
+  if (!current.hash) return;
+  if (current.origin + current.pathname != self.location.href) return;
+  (function (anchorPoint) {
+    if (anchorPoint) {
+      current.addEventListener(
+        'click',
+        function (e) {
+          anchorPoint.scrollIntoView({ behavior: 'smooth' });
+          e.preventDefault();
+        },
+        false
+      );
+    }
+  })(document.querySelector(current.hash));
+});
